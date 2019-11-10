@@ -5,79 +5,72 @@ O objetivo deste projeto é avaliar o desenvolvimento de uma aplicação java ut
 ### Baseado no [Building an Application with Spring Boot](https://spring.io/guides/gs/spring-boot/).
 
 
-## Set up environment
+## Preparando o ambiente
 
 Para iniciar o projeto é necessário realizar o clone deste repositório
 
+Após clonar este projeto, é necessário configurar o banco de dado no MySQL. Para isso faça:
+
+- No MySQL Server use o comando:
+
 ```bash
-    $ git clone https://github.com/Sensedia/craftbeer.git
+    $ mysql -u <username> -p < <project_directory>/src/main/sql/database.sql
 ```
 
-Você deverá compartilhar no seu repositório do github as alterações solicitadas para o projeto. 
-O endereço deste repositório deverá ser enviado para rh@sensedia.com
+Exemplo:
 
-## Especificação do projeto
+```bash
+    [/home/rtakemura/projects/craftbeer rtakemura]$ mysql -u root -p < ./src/main/sql/database.sql
+```
 
-A beer house é uma empresa possui um catálogo de cervejas artesanais. Esta empresa está buscando entrar no mundo digital.
-Para entrar no mundo digital a beer house decidiu começar pelas APIs. As APIs serão utilizadas para compartilhar dados com os parceiros e também para o seu sistema web.
+Se você não tem o MySQL Server, você pode baixa-lo em https://www.mysql.com.
 
-Pra atender a esta demanda será necessário que a você implemente as APIs do projeto beer house.
+Para testar as Web Services, utilize o Postman (https://www.getpostman.com/):
 
-Para implementar estas APIs você dever seguir a especificação do swagger que está neste projeto.
+- Ao abrir ele, você deve cadastrar ou ter um usuário cadastrado para utiliza-lo;
+- Na tela principal existem duas configurações a fazer (em vermelho):
+<br/>
+![Tela principal](docs/img/main.png)
+<br/><br/>
+- Para as variáveis de ambiente (importa arquivo ``postman/DEV.postman_environment.json``):
+<br/>
+![Ambiente](docs/img/settings_environment.png)
+<br/><br/>
+- Para a coleção de requisições (importa arquivo ``postman/BeerHouse.postman_collection.json``):
+<br/>
+![Coleção de requisições](docs/img/collection.png)
+<br/><br/>
 
-    craftbeer
-    |
-    |docs
-    |    |___swagger-craftbeer
+## Rodando a aplicação
 
+Para rodar a aplicação:
 
-## Requisitos do projeto
+- Importe seu projeto Maven (https://maven.apache.org/) no Eclipse (https://www.eclipse.com);
+- Após ele configurar as bibliotecas, clique com o botão direito do mouse na classe ``com.beer.house.Application`` e rode ele como uma aplicação Java (Java Application);
 
-1. Administrar cervejas: 
+Para rodar os JUnit (testes):
 
-- O sistema deverá ter um cadastro de cervejas artesanais por API.<br/>
-- O sistema deverá ser capaz de criar, excluir e alterar as cervejas.
-   
-2. Sistema deverá armazenar os dados em banco de dados. 
- 
-- Poderá ser utilizado MYSQL ou qualquer banco de dados embbeded.<br/>
-  Caso seja utilizado o MYSQL, adicionar o script para criação do banco.
-- A comunicação com o sistema deverá ser feita através de JPA.
+- No Eclipse, vá na pasta ``src/test/java``, clique com o botão direito, e rode a aplicação como JUnit (JUnit Application);
 
-3. O sistema deve conter testes unitários com JUnit
+##Cobertura dos testes
 
-4. O sistema deve conter uma forma de validar o funcionamento.
-   
-- Deverá ser diponibilizado uma coleção do postman ou soapui para testar todos os recursos
+Em uma primeira análise, a cobertura dos testes unitários está em 92.2% do total de código-fonte:
+<br/>
+![Cobertura dos testes unitários](docs/img/cobertura.png)
+<br/><br/>
 
-## O que será avaliado no projeto
+##Troubleshooting
 
-- Qualidade de código
-- Design patterns utilizados
-- O sistema tem que estar completo e possuir todos os scripts necessários para a execução
-- A utilização do JPA de forma correta
-- A criação de testes unitários
+O sistema dá a seguinte mensagem "The port may already be in use or the connector may be misconfigured":
 
-## O que você deve fazer:
+- Verifique se outro sistema web esta executando na porta 9000 (configuração no ``application.yml`` da pasta ``src/main/resources``);
+- Mude a porta configurada (propriedade ``port``) no arquivo ``application.yml`` da pasta ``src/main/resources``;
 
-- Utilizar java ao máximo e mostrar todo o seu conhecimento.
-- Entregar o projeto completo
-- Usar Java 8 e deixar a gente bem feliz com isso!
+O MySQL exibe o seguinte erro "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2):
 
-## O que você pode fazer:
+- Verifique se o daemon do MySQL esta iniciado;
+- Use o comando ``sudo /usr/local/mysqld start`` ou ``sudo systemctl restart mysql``;
 
-- Utilizar frameworks
-- Utilizar Spring Data ou qualquer outro framework para JPA.
-- Alterar e criar o código à vontade
-- Consultar tutoriais, consultar fóruns e tirar dúvidas
-- Você pode aprender com código de outras pessoas, utilizar trechos, mas não usar tudo igual.
+O sistema dá a seguinte mensagem "Schema-validation: missing table [beer]":
 
-## O que você não pode fazer:
-
-- Copiar de outros candidatos
-- Pedir alguém para fazer o projeto para você
-
-## Links de sugestão:
-
-### [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/).
-### [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/).
+- Execute o script ``src/main/sql/database.sql`` no mysql (como usuário ``root``);
