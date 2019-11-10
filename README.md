@@ -75,3 +75,9 @@ O MySQL exibe o seguinte erro "ERROR 2002 (HY000): Can't connect to local MySQL 
 O sistema dá a seguinte mensagem "Schema-validation: missing table [beer]":
 
 - Execute o script ``src/main/sql/database.sql`` no mysql (como usuário ``root``);
+
+O sistema dá a seguinte mensagem "Unknown database 'beerhouse'":
+
+- Execute o script ``src/main/sql/database.sql`` no mysql (como usuário ``root``);
+
+
