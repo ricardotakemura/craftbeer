@@ -27,7 +27,7 @@ Se você não tem o MySQL Server, você pode baixa-lo em https://www.mysql.com.
 
 Para testar as Web Services, utilize o Postman (https://www.getpostman.com/):
 
-- Ao abrir ele, você deve cadastrar ou ter um usuário cadastrado para utiliza-lo:
+- Ao abrir ele, você deve cadastrar ou ter um usuário cadastrado para utiliza-lo.
 
 Na tela principal existem duas configurações a fazer (em vermelho):
 <br/>
