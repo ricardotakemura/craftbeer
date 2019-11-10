@@ -27,16 +27,17 @@ Se você não tem o MySQL Server, você pode baixa-lo em https://www.mysql.com.
 
 Para testar as Web Services, utilize o Postman (https://www.getpostman.com/):
 
-- Ao abrir ele, você deve cadastrar ou ter um usuário cadastrado para utiliza-lo;
-- Na tela principal existem duas configurações a fazer (em vermelho):
+- Ao abrir ele, você deve cadastrar ou ter um usuário cadastrado para utiliza-lo:
+
+Na tela principal existem duas configurações a fazer (em vermelho):
 <br/>
 ![Main](docs/img/main.png)
 <br/><br/>
-- Para as variáveis de ambiente (importa arquivo ``postman/DEV.postman_environment.json``):
+Para as variáveis de ambiente (importa arquivo ``postman/DEV.postman_environment.json``):
 <br/>
 ![Settings Environment](docs/img/settings_environment.png)
 <br/><br/>
-- Para a coleção de requisições (importa arquivo ``postman/BeerHouse.postman_collection.json``):
+Para a coleção de requisições (importa arquivo ``postman/BeerHouse.postman_collection.json``):
 <br/>
 ![Collection](docs/img/collection.png)
 <br/><br/>
