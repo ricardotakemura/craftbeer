@@ -30,15 +30,15 @@ Para testar as Web Services, utilize o Postman (https://www.getpostman.com/):
 - Ao abrir ele, você deve cadastrar ou ter um usuário cadastrado para utiliza-lo;
 - Na tela principal existem duas configurações a fazer (em vermelho):
 <br/>
-![Tela principal](docs/img/main.png)
+![Main](docs/img/main.png)
 <br/><br/>
 - Para as variáveis de ambiente (importa arquivo ``postman/DEV.postman_environment.json``):
 <br/>
-![Ambiente](docs/img/settings_environment.png)
+![Settings Environment](docs/img/settings_environment.png)
 <br/><br/>
 - Para a coleção de requisições (importa arquivo ``postman/BeerHouse.postman_collection.json``):
 <br/>
-![Coleção de requisições](docs/img/collection.png)
+![Collection](docs/img/collection.png)
 <br/><br/>
 
 ## Rodando a aplicação
@@ -56,7 +56,7 @@ Para rodar os JUnit (testes):
 
 Em uma primeira análise, a cobertura dos testes unitários está em 92.2% do total de código-fonte:
 <br/>
-![Cobertura dos testes unitários](docs/img/cobertura.png)
+![Cobertura](docs/img/cobertura.png)
 <br/><br/>
 
 ## Troubleshooting
