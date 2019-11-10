@@ -52,14 +52,14 @@ Para rodar os JUnit (testes):
 
 - No Eclipse, vá na pasta ``src/test/java``, clique com o botão direito, e rode a aplicação como JUnit (JUnit Application);
 
-##Cobertura dos testes
+## Cobertura dos testes
 
 Em uma primeira análise, a cobertura dos testes unitários está em 92.2% do total de código-fonte:
 <br/>
 ![Cobertura dos testes unitários](docs/img/cobertura.png)
 <br/><br/>
 
-##Troubleshooting
+## Troubleshooting
 
 O sistema dá a seguinte mensagem "The port may already be in use or the connector may be misconfigured":
 
