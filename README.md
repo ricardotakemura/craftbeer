@@ -33,11 +33,11 @@ Na tela principal existem duas configurações a fazer (em vermelho):
 <br/>
 ![Main](docs/img/main.png)
 <br/><br/>
-Para as variáveis de ambiente (importa arquivo ``postman/DEV.postman_environment.json``):
+Para as variáveis de ambiente (importar arquivo ``postman/DEV.postman_environment.json``):
 <br/>
 ![Settings Environment](docs/img/settings_environment.png)
 <br/><br/>
-Para a coleção de requisições (importa arquivo ``postman/BeerHouse.postman_collection.json``):
+Para a coleção de requisições (importar arquivo ``postman/BeerHouse.postman_collection.json``):
 <br/>
 ![Collection](docs/img/collection.png)
 <br/><br/>
