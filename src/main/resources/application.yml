@@ -1,0 +1,15 @@
+server:
+  port: 9000
+  context-path: /beerhouse
+spring:
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    platform: mysql
+    url: jdbc:mysql://127.0.0.1:3306/beerhouse
+    username: beerhouse
+    password: beerhouse
+    driverClassName: com.mysql.jdbc.Driver

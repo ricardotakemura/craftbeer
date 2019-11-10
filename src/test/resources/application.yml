@@ -1,0 +1,15 @@
+server:
+  port: 9000
+  context-path: /beerhouse
+spring:
+  jpa:
+    database: H2
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: h2
+    url: jdbc:h2:mem:test
+    username: 
+    password: 
+    driverClassName: org.h2.Driver

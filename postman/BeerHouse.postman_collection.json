@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "651eaf10-81b8-4586-ac56-9ab71eae6939",
+		"name": "BeerHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL BEERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{hostname}}/beerhouse/beers",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"beerhouse",
+						"beers"
+					]
+				},
+				"description": "Obtem todas as cervejas registradas"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE BEER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\": 1,\n\"name\": \"Cerveja preta\",\n\"ingredients\": \"Cevada, lúpudo e malte\",\n\"alcoholContent\": \"12%\",\n\"price\": 6.8,\n\"category\": \"Forte\"\n}"
+				},
+				"url": {
+					"raw": "http://{{hostname}}//beerhouse/beers",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"",
+						"beerhouse",
+						"beers"
+					]
+				},
+				"description": "Cadastra os dados de uma cerveja"
+			},
+			"response": []
+		},
+		{
+			"name": "GET BEER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{hostname}}//beerhouse/beer/1",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"",
+						"beerhouse",
+						"beer",
+						"1"
+					]
+				},
+				"description": "Obtem uma cerveja pelo seu ID"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE BEER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\": 1,\n\"name\": \"Cerveja forte\",\n\"ingredients\": \"Cevada e lúpudo\",\n\"alcoholContent\": \"19%\",\n\"price\": 4.5,\n\"category\": \"Fortíssimo\"\n}"
+				},
+				"url": {
+					"raw": "http://{{hostname}}//beerhouse/beer/1",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"",
+						"beerhouse",
+						"beer",
+						"1"
+					]
+				},
+				"description": "Atualiza todos dados da cerveja"
+			},
+			"response": []
+		},
+		{
+			"name": "CHANGE BEER",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"category\": \"Média\"\n}"
+				},
+				"url": {
+					"raw": "http://{{hostname}}//beerhouse/beer/1",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"",
+						"beerhouse",
+						"beer",
+						"1"
+					]
+				},
+				"description": "Altera uma propriedade da cerveja."
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE BEER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{hostname}}//beerhouse/beer/1",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"",
+						"beerhouse",
+						"beer",
+						"1"
+					]
+				},
+				"description": "Exclui uma cerveja pelo id"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
